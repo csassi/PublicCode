@@ -1,0 +1,72 @@
+﻿
+<div class="card">
+    <div class="card-header">User Details</div>
+    <div class="card-body">
+
+        <div class="form-group">
+            <div classW="row">
+                <div>
+                    <label for="UserLocation">
+                        Location
+                        <span class="text-muted small">(Please select your location.)</span>
+                        <span class="text-muted small  alert-info create-idea-required-text">*Required</span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="d-flex">
+                        <select id="UserLocation" required="required" class="form-control" name="UserLocation"
+                                data-bind="options: $root.locationItems, value: SelectedLocation,
+                                    optionsText: 'City', optionsValue: 'Id', optionsCaption:'Please Select'"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div>
+                    <label for="UserComponent">
+                        Component
+                        <span class="text-muted small">(Please select your component.)</span>
+                        <span class="text-muted small  alert-info create-idea-required-text">*Required</span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="d-flex">
+                        <select id="UserComponent" required="required" class="form-control" name="UserComponent"
+                                data-bind="options: $root.componentItems, value: SelectedComponent,
+                                    optionsText: 'Component', optionsValue: 'Id', optionsCaption:'Please Select'"></select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div>
+                    <label for="Supervisor">
+                        Supervisor's Email
+                        <span class="text-muted small">(Please enter your supervisor's email.)</span>
+                        <span class="text-muted small  alert-info create-idea-required-text">*Required</span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="d-flex">
+                        <input id="Supervisor" name="Supervisor"
+                               required="required" data-bind="event: {blur: searchBlurred}, textInput: SupervisorEmail, ko_autocomplete: {source: getAutocompleteValues,  select: checkEmail}"
+                               type="text" class="form-control" placeholder="LastName,FirstName OR Pin" />
+                        <div data-bind="visible: CheckThumbsUp" class="email-thumb alert-success">
+                            <i class="fa fa-thumbs-o-up fa-2x email-thumb-font"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

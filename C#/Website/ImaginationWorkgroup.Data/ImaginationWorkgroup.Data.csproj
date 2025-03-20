@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{690C3EE5-519D-4903-9894-76D7283D80C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ImaginationWorkgroup.Data</RootNamespace>
+    <AssemblyName>ImaginationWorkgroup.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="CPI.DirectoryServices, Version=1.2.0.0, Culture=neutral, PublicKeyToken=9acea252523a2304, processorArchitecture=MSIL">
+      <HintPath>..\packages\DNParser.1.2.0.0\lib\net40-Client\CPI.DirectoryServices.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.1.2\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Inflector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Inflector.1.0.0.0\lib\net45\Inflector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="NH.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Nh.Common.1.0.0\lib\net451\NH.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.1.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.1.3\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.1.2\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.1.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.1.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="this.Log, Version=0.0.3.0, Culture=neutral, PublicKeyToken=cbf7544467682e94, processorArchitecture=MSIL">
+      <HintPath>..\packages\this.Log.0.0.3.0\lib\net40\this.Log.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Configuration\ADKeywords.cs" />
+    <Compile Include="Configuration\EntityPersisterUtility.cs" />
+    <Compile Include="Configuration\NhConfigurator.cs" />
+    <Compile Include="Configuration\NhEventListener.cs" />
+    <Compile Include="Domains\EmailDomain.cs" />
+    <Compile Include="Domains\FeatureDomain.cs" />
+    <Compile Include="Domains\IdeaDomain.cs" />
+    <Compile Include="Domains\IEmailDomain.cs" />
+    <Compile Include="Domains\IFeatureDomain.cs" />
+    <Compile Include="Domains\IIdeaDomain.cs" />
+    <Compile Include="Dto\RouteUpdateType.cs" />
+    <Compile Include="Entities\ComponentContact.cs" />
+    <Compile Include="Entities\DistributionList.cs" />
+    <Compile Include="Entities\FeatureUtilization.cs" />
+    <Compile Include="Entities\Audit\History.cs" />
+    <Compile Include="Entities\Audit\HistoryItem.cs" />
+    <Compile Include="Entities\Audit\INoAuditTrigger.cs" />
+    <Compile Include="Entities\Audit\ModifiedByEntityBase.cs" />
+    <Compile Include="Entities\Email\EmailAddressee.cs" />
+    <Compile Include="Entities\Email\EmailAttachment.cs" />
+    <Compile Include="Entities\Email\EmailerBase.cs" />
+    <Compile Include="Entities\Email\EmailHeader.cs" />
+    <Compile Include="Entities\EmployeeProfile.cs" />
+    <Compile Include="Entities\FeatureFlag.cs" />
+    <Compile Include="Entities\Idea.cs" />
+    <Compile Include="Entities\IdeaComment.cs" />
+    <Compile Include="Entities\IdeaDescription.cs" />
+    <Compile Include="Entities\IdeaDescriptionType.cs" />
+    <Compile Include="Entities\IdeaStatus.cs" />
+    <Compile Include="Entities\ImaginationEntityBase.cs" />
+    <Compile Include="Entities\Location.cs" />
+    <Compile Include="Entities\MapAttribute.cs" />
+    <Compile Include="Entities\ReviewGroup.cs" />
+    <Compile Include="Entities\ReviewGroupDistro.cs" />
+    <Compile Include="Entities\ReviewGroupMember.cs" />
+    <Compile Include="Entities\ReviewGroupStatus.cs" />
+    <Compile Include="Entities\SourceComponent.cs" />
+    <Compile Include="Entities\StatusGroup.cs" />
+    <Compile Include="Entities\StatusMap.cs" />
+    <Compile Include="Entities\UserInfo.cs" />
+    <Compile Include="LogExtensions.cs" />
+    <Compile Include="MappingOverrides\EmailAddresseeOverride.cs" />
+    <Compile Include="MappingOverrides\EmailAttachmentOverride.cs" />
+    <Compile Include="MappingOverrides\EmailHeaderOverride.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ADUserInfoProvider.cs" />
+    <Compile Include="Providers\FeatureFlagProvider.cs" />
+    <Compile Include="Providers\IFeatureFlagProvider.cs" />
+    <Compile Include="Providers\IUserInfoProvider.cs" />
+    <Compile Include="Repositories\IRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

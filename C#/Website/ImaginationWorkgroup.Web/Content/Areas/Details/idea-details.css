@@ -1,0 +1,24 @@
+﻿.idea-details-comment-textbox {
+    width: 65% !important;
+    max-width:90%;
+    padding-bottom:50px;
+}
+.idea-details-modal-textbox {
+    width: 100% !important;
+    max-width: 100%;
+}
+.idea-details-comment-textbox-container {
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+.idea-details-char-count {
+    padding-left: 1%;
+    padding-top: 2%;
+}
+.idea-details-comment-button {
+    margin-top: 1%;
+}
+.idea-details-review-button {
+    margin-left: 1%;
+}
+

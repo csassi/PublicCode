@@ -1,0 +1,36 @@
+﻿.about-mouse-select {
+    cursor: pointer;
+}
+.about-card {
+    padding:0px
+}
+.about-i-want-to-text {
+    font-size: 35px;
+}
+.about-cog {
+    font-size: 95px;
+}
+.about-cog-light-blue {
+    color: lightblue
+}
+.about-cog-red {
+    color: red
+}
+.about-cog-purple {
+    color: purple
+}
+.about-cog-yellow {
+    color: yellowgreen
+}
+.about-cog-orange {
+    color: orange
+}
+.about-cog-dark-blue {
+    color: blue
+}
+.about-cog-pink {
+    color: pink
+}
+.about-cog-green {
+    color: green
+}

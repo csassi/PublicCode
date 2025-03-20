@@ -1,0 +1,20 @@
+﻿@model ImaginationWorkgroup.Infrastructure.Models.IdeaDetailsModel
+
+<div data-bind="if: displayReviewPanel">
+    <div class="card">
+        <div class="card-header">Idea Review</div>
+        <div class="card-body">
+            <div class="form-group">
+                <div classW="row">
+                    <div data-bind="foreach: statusMaps">
+                            <button type="button" 
+                                    data-bind="attr: { title: Title }, click: $root.statusMapSelected, 
+                                    enable: $root.statusMapsEnabled, text:DisplayText, class: ButtonClass">
+                            </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,19 @@
+﻿@model ImaginationWorkgroup.Infrastructure.Models.CreateIdeaSubmissionModel
+@{
+    ViewBag.Title = "Create Idea";
+}
+
+@Styles.Render("~/Content/Areas/Idea/Create/create-idea.css")
+@Styles.Render("~/Content/font-awesome.css")
+@Styles.Render("~/Content/Misc/alert.css")
+@Styles.Render("~/Content/themes/base/base.css")
+@section Scripts  {
+
+    @Scripts.Render(CustomBundles.JS.Knockout)
+    @Scripts.Render(CustomBundles.JS.JQueryUI)
+    @Scripts.Render(CustomBundles.JS.CreateIdea)
+    <script>
+        var CreateIdeaModel = @Html.Raw(Json.Encode(Model));
+    </script>
+}
+@Html.Partial("Index/_Index")

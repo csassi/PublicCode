@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @Html.Partial("LayoutSections/_head")
+</head>
+<body>
+    @Html.Partial("LayoutSections/_topNav")
+
+    @{ var containerClass = ViewBag.Containerless ?? false ? string.Empty : "container-fluid";}
+    <div class="@containerClass body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script type="text/javascript" src="~/Scripts/Areas/Watchdog/usage-hawk.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

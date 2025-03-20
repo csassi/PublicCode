@@ -1,0 +1,74 @@
+﻿@{
+    if (FeatureUtility.GetFeatures().ShowComingSoonOnAbout)
+    {
+        ViewBag.Title = "Coming Soon";
+    }
+    else
+    {
+        ViewBag.Title = "About";
+    }
+}
+
+
+@using ImaginationWorkgroup.Web.Utilities
+
+@Scripts.Render("~/bundles/jquery")
+@Styles.Render("~/Content/font-awesome.css")
+@Styles.Render("~/Content/Areas/About/about.css")
+
+<div class="mx-auto text-center pb-3">
+    <h1>Imagination Workgroup</h1>
+    @if (FeatureUtility.GetFeatures().ShowComingSoonOnAbout)
+    {
+        <h2>Phase 2 - Coming Soon</h2>
+    }
+</div>
+
+<img class="mx-auto d-block pb-3" src="~/Content/Images/Logo3.jpg" alt="Logo for Imagination Workgroup" style="height:auto; width:50%" />
+
+<body>
+    <h3>Purpose</h3>
+    <p>
+        The purpose of the Imagination Workgroup (IW) is to streamline workloads via automation in
+        an effort to eliminate or decrease manual inputs/processes, and improve the accuracy of workloads.
+    </p>
+    <p>
+        The workgroup will establish an environment where the knowledge of IT specialists, employees, and management merge
+        to devise creative means of identifying those processes that can be automated, as well as eliminate processes no longer necessary.
+    </p>
+
+    @if (FeatureUtility.GetFeatures().ShowComingSoonOnAbout)
+    {
+        <h3>Coming Soon</h3>
+        <p>
+            All employees will have the opportunity to submit ideas to improve business processes or eliminate processes that have a direct,
+            cost savings impact on Operations’ workloads.
+        </p>
+        <p>
+            Employees will soon have the capability to submit their ideas via an electronic form located
+            on the <em><strong>NEW & IMPROVED</strong></em> Imagination Workgroup website.
+        </p>
+    }
+
+    @Html.Partial("_LearnMore")
+
+
+
+</body>
+
+<script>
+    $(window.document).ready(function () {
+        if (window.location.hash === "#howtosubmit") {
+            $("#submitIdea").collapse('show');
+            $('html, body').animate({
+                scrollTop: $('#submitIdea').offset().top - 150 
+            }, 'slow')
+        }
+        if (window.location.hash === "#abouttheprocess") {
+            $("#theProcess").collapse('show');
+            $('html, body').animate({
+                scrollTop: $('#theProcess').offset().top - 150
+            }, 'slow')
+        }
+    });
+</script>

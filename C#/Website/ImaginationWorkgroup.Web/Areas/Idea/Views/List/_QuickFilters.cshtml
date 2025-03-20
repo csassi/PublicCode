@@ -1,0 +1,10 @@
+﻿<div class="qf-bar">
+
+    <nav class="nav nav-pills nav-justified" role="tablist" data-bind="foreach: filterItems">
+        <a class="nav-item nav-link" href="#" role="tab"
+           data-bind="text: display, attr: {'title': title, 'aria-selected': active}, css: {'active': active}, click: $parent.updateSelectedFilter"></a>
+    </nav>
+
+</div>
+
+

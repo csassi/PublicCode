@@ -1,0 +1,23 @@
+﻿<div class="modal fade" id="location-change-modal" tabindex="-1" role="dialog" aria-labelledby="location-change-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="location-change-modal-label">Are you sure you want to change location?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    This idea is currently assigned to <span data-bind="text: $root.Model.LocationChangeModel.CurrentLocation.Location"></span>. 
+                    By clicking "Change Location" you will reassign this Idea to <span data-bind="text: $root.selectedLocationText"></span>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" data-bind='click: $root.postLocationChange, enable: $root.canChangeLocation' class="btn btn-primary">Change Location</button>
+            </div>
+        </div>
+    </div>
+</div>
+

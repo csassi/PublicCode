@@ -1,0 +1,32 @@
+﻿.create-idea-char-count {
+    padding-left: 1%;
+    padding-top: 2%;
+}
+
+.create-idea-textbox {
+    width: 60%;
+    max-width:90%;
+}
+.create-idea-required-text {
+    margin-left:0px !important;
+}
+
+.validation-message {
+    position:inherit;
+    height:40px;
+    padding-top:5px;
+    margin-left:5px;
+}
+
+.customMessage {
+    color: #f00;
+    padding-left: 10px
+}
+.email-thumb {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+.email-thumb-font {
+    font-size: 36px
+}

@@ -1,0 +1,25 @@
+﻿
+
+<div class="card">
+    <div class="card-header">Status Changes</div>
+    <div class="card-body">
+
+        <ul data-bind="foreach: statusItems" class="list-group">
+
+            <li class="list-group-item">
+                <span class="blockquote">
+                    <span>Status changed from </span>
+                    <span data-bind="text: FromStatus"></span>
+                    <span> to </span>
+                    <span data-bind="text: ToStatus"></span>
+                </span>
+                <span class="blockquote-footer">
+                    <span>By </span>
+                    <span data-bind="text: Who"></span>
+                    <span> on </span>
+                    <span data-bind="text: When"></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>

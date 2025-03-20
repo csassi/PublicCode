@@ -1,0 +1,89 @@
+﻿
+<div class="card">
+    <div class="card-header">Idea Details</div>
+    <div class="card-body">
+
+        <div class="form-group">
+            <div classW="row">
+                <div>
+                    <label for="IdeaTitle">
+                        Title
+                        <span class="text-muted small">(Please enter a short, but unique and descriptive title.)</span>
+                        <span class="text-muted small alert-info create-idea-required-text">*Required</span>
+                        <span class="text-muted small" data-bind="text: TitleCharCounter, css: {'bg-warning': TitleIsMaxLength()}"></span>
+
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="d-flex">
+                        <textarea data-bind="attr: { maxlength:MaxTitleChars, title: TitlePlaceholder, placeholder:TitlePlaceholder }, textInput: IdeaTitle" required="required" rows="2" class="create-idea-textbox form-control" name="IdeaTitle" id="IdeaTitle"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div>
+                    <label for="IdeaProblem">
+                        Problem
+                        <span class="text-muted small">(Please state the issue or problem you wish to solve.)</span>
+                        <span class="text-muted small  alert-info create-idea-required-text">*Required</span>
+                        <span class="text-muted small" data-bind="text: ProblemCharCounter, css: {'bg-warning': ProblemIsMaxLength()}"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="d-flex">
+                        <textarea data-bind="attr: { maxlength:MaxProblemChars, title: ProblemPlaceholder, placeholder:ProblemPlaceholder }, textInput: IdeaProblem" required="required" rows="7" class="create-idea-textbox form-control" name="IdeaProblem" id="IdeaProblem"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div>
+                    <label for="IdeaText">
+                        Idea
+                        <span class="text-muted small">(Please state your idea.)</span>
+                        <span class="text-muted small  alert-info create-idea-required-text">*Required</span>
+                        <span class="text-muted small" data-bind="text: IdeaCharCounter, css: {'bg-warning': IdeaIsMaxLength()}"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="d-flex">
+                        <textarea data-bind="attr: { maxlength:MaxIdeaChars, title: IdeaPlaceholder, placeholder:IdeaPlaceholder }, textInput: IdeaText" required="required" rows="7" class="create-idea-textbox form-control" name="IdeaText" id="IdeaText"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div>
+                    <label for="IdeaBenefits">
+                        Benefits
+                        <span class="text-muted small">(Please state what you think the benefits of your idea are.)</span>
+                        <span class="text-muted small  alert-info create-idea-required-text">*Required</span>
+                        <span class="text-muted small" data-bind="text: BenefitCharCounter, css: {'bg-warning': BenefitIsMaxLength()}"></span>
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-10">
+                    <div class="d-flex">
+                        <textarea data-bind="attr: { maxlength:MaxBenefitChars, title:BenefitPlaceholder, placeholder:BenefitPlaceholder }, textInput: IdeaBenefits" required="required" rows="7" class="create-idea-textbox form-control" name="IdeaBenefits" id="IdeaBenefits"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

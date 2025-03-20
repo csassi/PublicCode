@@ -1,0 +1,25 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="ProcessFlowModal" tabindex="-1" role="dialog" aria-labelledby="ProcessFlowModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" data-bind="with: selectedStatusMap">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ProcessFlowModalLabel">Are you sure?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="alert alert-yellow alert-warning" data-bind="text: PromptText"></p>
+                <textarea rows="5" class="form-control idea-details-modal-textbox" data-bind="textInput: $root.ModalComment, attr: { maxlength:$root.MaxModalCommentChars, placeholder: PromptPlaceholder }" name="ModalComment" maxlength="1000"></textarea>
+                <div class="small idea-details-char-count">
+                    <span class="text-muted" data-bind="text: $root.ModalCommentCharCounter, css: {'bg-warning':$root.ModalCommentIsMaxLength()}"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" data-bind='click: $root.modalSubmitClick, enable: $root.canSubmitModal, text:$root.modalButtonText' class="btn btn-primary"></button>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,30 @@
+﻿<div data-bind="if: displayLocationPanel">
+    <form data-bind="submit: raiseLocationModal">
+        <div class="card">
+            <div class="card-header">Change Work Location</div>
+            <div class="card-body">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <p>
+                                The work for this idea is currently assigned to
+                                <span data-bind="text: Model.LocationChangeModel.CurrentLocation.Location"></span>
+                            </p>
+
+                            <div class="input-group">
+                                <div style="width: 10rem">
+                                    <select id="UserComponent" required="required" class="custom-select" name="WorkLocation"
+                                            data-bind="options: Model.LocationChangeModel.PossibleLocations, value: selectedWorkLocation,
+                                    optionsText: 'Location', optionsValue: 'Id'"></select>
+                                </div>
+                                <div class="input-group-append">
+                                    <button class="btn btn-info" type="submit">Change Location</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

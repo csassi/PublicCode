@@ -1,0 +1,130 @@
+﻿
+@using ImaginationWorkgroup.Web.Utilities
+
+@{
+    ViewBag.Title = "Idea Details";
+}
+
+<div class="create-idea-header px-3 py-1 pt-md-2 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">@Model.Title</h1>
+    <p class="lead">
+        This idea was submitted on @Model.Created by @Model.Employee
+    </p>
+    <p class="text-muted text-black-50 small">Last modified on @Model.Modified by @Model.ModifiedBy</</p>
+</div>
+
+<div class="card">
+    <div class="card-header">Idea Details</div>
+    <div class="card-body">
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Reference #</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Id
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Problem</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Problem
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Idea</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Idea
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Benefits</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Benefits
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Status</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Status
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">User Details</div>
+    <div class="card-body">
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Component</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Component
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Location</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Location
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div classW="row">
+                <div class="form-inline container-separator">
+                    <h5 class="col-lg-2 col-md-4">
+                        <b>Supervisor</b>
+                    </h5>
+                    <span class="col-lg-10 col-md-10  card-text">
+                        @Model.Supervisor
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

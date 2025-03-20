@@ -1,0 +1,75 @@
+﻿@using ImaginationWorkgroup.Web.Utilities
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark-site fixed-top">
+    <div class="container">
+        <div id="logo" class="navbar-header logo"></div>
+        <div class="navbar-header">
+            @Html.ActionLink("Imagination Workgroup", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbarMd">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="collapsingNavbarMd">
+            <ul class="navbar-nav ml-auto">
+                @if (FeatureUtility.GetFeatures().CreateIdeaView)
+                {
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Create", new { area = "Idea" })" class="nav-link">
+                            <span class="fa fa-plus-square"></span><span class="pl-1">SUBMIT IDEA</span>
+                        </a>
+                    </li>
+                }
+                @if (FeatureUtility.GetFeatures().ListIdeasView)
+                {
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "List", new { area = "Idea" })" class="nav-link">
+                            <span class="fa fa-bars"></span><span class="pl-1">VIEW IDEAS</span>
+                        </a>
+                    </li>
+                }
+
+                <li class="nav-item">
+                    <a href="@Url.Action("Index", "Home", new { area = string.Empty })" class="nav-link">
+                        <span class="fa fa-info-circle"></span><span class="pl-1">ABOUT US</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+
+@*<nav class="navbar navbar-expand-sm navbar-dark bg-dark-site fixed-top">
+        <div class="container-fluid">
+            <div id="logo" class="navbar-header logo"></div>
+            <div class="navbar-header">
+                @Html.ActionLink("Imagination Workgroup", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    @if (FeatureUtility.GetFeatures().CreateIdeaView)
+                    {
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "Create", new { area = "Idea" })" class="nav-link">
+                                <span class="fa fa-plus-square"></span><span class="pl-1">SUBMIT IDEA</span>
+                            </a>
+                        </li>
+                    }
+                    @if (FeatureUtility.GetFeatures().ListIdeasView)
+                    {
+                        <li class="nav-item">
+                            <a href="@Url.Action("Index", "List", new { area = "Idea" })" class="nav-link">
+                                <span class="fa fa-bars"></span><span class="pl-1">VIEW IDEAS</span>
+                            </a>
+                        </li>
+                    }
+
+                    <li class="nav-item">
+                        <a href="@Url.Action("Index", "Home", new { area = string.Empty })" class="nav-link">
+                            <span class="fa fa-info-circle"></span><span class="pl-1">ABOUT US</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>*@

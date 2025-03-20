@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Idea Listing";
+    ViewBag.Containerless = true;
+}
+
+@Styles.Render("~/Content/font-awesome.css")
+@Styles.Render("~/Content/Areas/List/list-idea.css")
+
+@section Scripts{
+
+    @Scripts.Render(CustomBundles.JS.Knockout)
+    @Scripts.Render(CustomBundles.JS.Tablesorter)
+    @Scripts.Render(CustomBundles.JS.ViewIdea)
+}
+
+@Html.Partial("_QuickFilters")
+
+<div class="py-4 mx-auto text-center lead">
+    @Html.ActionLink("Want To Know More About What Happens To Your Idea Once You Submit?", "Index", "Background", null, null, "abouttheprocess", new { area = "About" }, new { @target = "_blank", @class = "" })
+</div>
+<div class="container-fluid">
+    @Html.Partial("_IdeaListing")
+</div>
+
+
+
+@Html.Partial("_LoadingModal")

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Idea Listing";
+}
+
+<div class="jumbotron text-xs-center">
+    <h1 class="display-3">Thank You!</h1>
+    <p class="lead">
+        <strong>
+            Please check your email
+        </strong>
+        for a receipt of your idea. Your idea reference number is @ViewBag.Id.
+    </p>
+    <hr>
+    <p>
+        Having trouble? <a href="http://wbdochost-helpdesk">Contact the OCO Helpdesk</a>
+    </p>
+    <p class="lead">
+        @Html.ActionLink("Continue to View Ideas", "Index", "List", new { area = "Idea" } , new { @class = "btn btn-primary btn-sm" })
+    </p>
+    <p class="lead">
+        @Html.ActionLink("Continue to Create Another Idea", "Index","Create", new { area = "Idea" }, new { @class = "btn btn-primary btn-sm" })
+    </p>
+</div>

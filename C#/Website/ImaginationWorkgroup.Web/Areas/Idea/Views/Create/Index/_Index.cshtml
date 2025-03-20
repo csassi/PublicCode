@@ -1,0 +1,24 @@
+﻿<div class="create-idea-header px-3 py-1 pt-md-2 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Submit Idea</h1>
+    <p class="lead">Submit your idea to the Imagination Workgroup!</p>
+    <p class="lead small text-dark"><u>Please include only one Idea in your submission.  If you have multiple ideas, please submit them separately.</u></p>
+    @Html.ActionLink("Need Help Submitting An Idea?", "Index", "Background", null, null, "howtosubmit", new {area = "About" }, new { @target = "_blank", @class = "" })
+</div>
+
+@*@using (Html.BeginForm("New", "Create", FormMethod.Post, new { data_bind = "submit: postForm" }))*@
+@using (Html.BeginForm("New", "Create", FormMethod.Post, new { id = "SubmitIdeaForm" }))
+{
+
+
+    @Html.Partial("Index/_IdeaDetails")
+    @Html.Partial("Index/_UserDetails")
+
+    <button type="button" data-bind='click: ShowModal, enable: SubmitEnabled, text:SubmitText' class="btn btn-primary"></button>
+
+    @Html.Partial("_YesNoModal")
+
+    //Neat little trick to stop the enter key from submitting the form.
+    <input type="text" style="display: none;" />
+}
+
+

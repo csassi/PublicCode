@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Review Complete";
+}
+
+<div class="jumbotron text-xs-center">
+    <h1 class="display-3">Review Complete</h1>
+    <p class="lead">
+        <strong>
+            Your review is now complete for idea reference number @ViewBag.Id.
+        </strong>
+        
+    </p>
+    <p>
+        @ViewBag.Text
+    </p>
+    <hr>
+    <p>
+        Having trouble? <a href="http://google.com">Contact the Helpdesk</a>
+    </p>
+    <p class="lead">
+        @Html.ActionLink("Continue to View Ideas", "Index", "List", new { area = "Idea" }, new { @class = "btn btn-primary btn-sm" })
+    </p>
+    <p class="lead">
+        @Html.ActionLink("Continue to Submit Idea", "Index", "Create", new { area = "Idea" }, new { @class = "btn btn-primary btn-sm" })
+    </p>
+</div>

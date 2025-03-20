@@ -1,0 +1,35 @@
+﻿
+<div class="create-idea-header px-3 py-1 pt-md-2 pb-md-4 mx-auto text-center">
+    <h5 class="display-4">I would like to...</h5>
+
+    <div class="create-idea-header card p-lg-2 m-md-4" id="abouttheprocess">
+        <div class="card-header about-mouse-select" data-toggle="collapse" href="#theProcess">
+            <h4>
+                <a aria-expanded="false" class="text-xl-left text-info text-primary about-i-want-to-text">...learn more about the process once I submit an idea.</a>
+            </h4>
+         </div>
+        <div class="collapse" id="theProcess">
+            <div class="card-body about-card">
+                @Html.Partial("_AboutTheProcess")
+            </div>
+        </div>
+
+    </div>
+
+    <div class="create-idea-header card p-lg-2 m-md-4" id="howtosubmit">
+        <div class="card-header about-mouse-select" data-toggle="collapse" href="#submitIdea">
+            <h4>
+                <a aria-expanded="false" class="text-xl-left text-info text-primary about-i-want-to-text">...learn more about how to submit an idea.</a>
+            </h4>
+        </div>
+        <div class="collapse" id="submitIdea">
+            <div class="card-body about-card">
+                @Html.Partial("_HowToSubmitAnIdea")
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

@@ -1,0 +1,31 @@
+﻿<!-- ko if: commentItems().length > 0 || SubmitEnabled()-->
+<div class="card">
+    <div class="card-header">Comments</div>
+    <div class="card-body">
+
+        <!-- ko if: SubmitEnabled() -->
+        <div class="idea-details-comment-textbox-container container-separator form-group">
+            <div class="form-inline">
+                <textarea rows="3" class="form-control idea-details-comment-textbox" data-bind="attr: { maxlength:MaxCommentChars }, textInput: Comment" name="CommentText" placeholder="Enter a comment..."></textarea>
+                <div class="small idea-details-char-count">
+                    <span class="text-muted" data-bind="text: CommentCharCounter, css: {'bg-warning':CommentIsMaxLength()}"></span>
+                </div>
+            </div>
+            <button type="button" data-bind='click: submitComment, enable: SubmitEnabled, text:SubmitText' class="btn btn-primary idea-details-comment-button"></button>
+        </div>
+        <!-- /ko -->
+
+        <ul data-bind="foreach: commentItems" class="list-group">
+
+            <li class="list-group-item">
+                <span data-bind="text: Comment" class="blockquote"></span>
+                <span class="blockquote-footer">
+                    <span data-bind="text: Employee"></span>
+                    <span> on </span>
+                    <span data-bind="text: Created"></span>
+                </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /ko -->

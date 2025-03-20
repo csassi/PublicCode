@@ -1,0 +1,41 @@
+﻿@model ImaginationWorkgroup.Infrastructure.Models.IdeaDetailsModel
+
+@{
+    ViewBag.Title = "Idea Details";
+}
+
+
+@Styles.Render("~/Content/font-awesome.css")
+@Styles.Render("~/Content/Misc/border.css")
+@Styles.Render("~/Content/Misc/alert.css")
+@Styles.Render("~/Content/Areas/Details/idea-details.css")
+
+
+@section Scripts  {
+
+    <script>
+        var IdeaDetailsModel = @Html.Raw(Json.Encode(Model));
+    </script>
+
+    @Scripts.Render(CustomBundles.JS.Knockout)
+    @Scripts.Render(CustomBundles.JS.JQueryUI)
+    @Scripts.Render(CustomBundles.JS.IdeaDetails)
+}
+
+
+@Html.Partial("_Index", Model)
+@Html.Partial("_Comments")
+
+@if (Model.StatusChanges.Any())
+{
+    @Html.Partial("_StatusChanges")
+}
+
+@Html.Partial("_LocationChangeCard")
+@Html.Partial("_LocationChangeModal")
+
+@Html.Partial("_ProcessFlowButtons", Model)
+@Html.Partial("_ProcessFlowModal")
+
+
+
